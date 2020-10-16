@@ -74,7 +74,7 @@ sudo apt-get upgrade
 ```
 - Then Run these commands:
 ```
-git clone https://github.com/jzee-rx/BashRec
+git clone https://github.com/jzee-rx/BashRec.git
 cd BashRec
 sudo chmod +x BashRec.sh
 ./BashRec
