@@ -1,11 +1,15 @@
 # BashRec 
 
+
+
 ██████╗  █████╗ ███████╗██╗  ██╗██████╗ ███████╗ ██████╗
 ██╔══██╗██╔══██╗██╔════╝██║  ██║██╔══██╗██╔════╝██╔════╝
 ██████╔╝███████║███████╗███████║██████╔╝█████╗  ██║     
 ██╔══██╗██╔══██║╚════██║██╔══██║██╔══██╗██╔══╝  ██║     
 ██████╔╝██║  ██║███████║██║  ██║██║  ██║███████╗╚██████╗
 ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝
+                                                        
+
 
 BashRec is a bash script which consists of various tools that can do very basic reconnaissance for a target domain.This utilizes the following tools:
 - Subdomain Enumeration:
