@@ -31,59 +31,59 @@ select opt in "${options[@]}"
 do
     case $opt in
         "All Templates")            
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/ -o $HOME/$domain/Nuclei_$domain.txt 
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/ -o $HOME/$domain/Nuclei_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
         "Cves")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/cves -o $HOME/$domain/NucleiCVES_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/cves -o $HOME/$domain/NucleiCVES_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
         "Default-Credentials")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/default-credentials -o $HOME/$domain/NucleiDefCred_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/default-credentials -o $HOME/$domain/NucleiDefCred_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
             "Dns")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/dns -o $HOME/$domain/NucleiDNS_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/dns -o $HOME/$domain/NucleiDNS_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
             "Files")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/files -o $HOME/$domain/NucleiFiles_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/files -o $HOME/$domain/NucleiFiles_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
              "Fuzzing")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/fuzzing -o $HOME/$domain/NucleiFuzzing_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/fuzzing -o $HOME/$domain/NucleiFuzzing_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
              "Generic-Detections")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/generic-detections -o $HOME/$domain/NucleiGeneric_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/generic-detections -o $HOME/$domain/NucleiGeneric_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
              "Panels")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/panels -o $HOME/$domain/NucleiPanels_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/panels -o $HOME/$domain/NucleiPanels_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
              "Security-Misconfiguration")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/security-misconfiguration -o $HOME/$domain/NucleiSecMis_$domain.txt 
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/security-misconfiguration -o $HOME/$domain/NucleiSecMis_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
              "Subdomain-Takeover")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/subdomain-takeover -o $HOME/$domain/NucleiSubdomainTakeover_$domain.txt  
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/subdomain-takeover -o $HOME/$domain/NucleiSubdomainTakeover_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
              "Technologies")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/technologies -o $HOME/$domain/NucleiTechnologies_$domain.txt  
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/technologies -o $HOME/$domain/NucleiTechnologies_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
              "Tokens")
-           nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/tokens -o $HOME/$domain/NucleiTokens_$domain.txt
+           nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/tokens -o $HOME/$domain/NucleiTokens_$domain.txt $nu
            echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
             "Vulnerabilities")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/vulnerabilities -o $HOME/$domain/NucleiVulnerabilities_$domain.txt
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/vulnerabilities -o $HOME/$domain/NucleiVulnerabilities_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
             "Workflows")
-            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/workflows -o $HOME/$domain/NucleiWorkflows_$domain.txt 
+            nuclei -l $HOME/$domain/http_$domain.txt -t $HOME/nuclei-templates/workflows -o $HOME/$domain/NucleiWorkflows_$domain.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}"
             ;;
         "Quit")
@@ -93,6 +93,7 @@ do
         echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}";;
     esac
 done
+
    else 
     nucleiSingle 
    fi
@@ -168,11 +169,11 @@ else
     CONT=${CONT,,}
 if [ "$CONT" = "y" ]; then
 echo
-echo -e " ------------------------------- "
+echo -e " ---------------------------- "
 echo
-echo -e " \033[36;7;5;107m    Installing Findomain     \033[0m"
+echo -e " \033[36;7;5;107m     Installing Findomain      \033[0m"
 echo
-echo -e " ------------------------------- "
+echo -e " ---------------------------- "
 tput ed
 tput sgr0
 echo
@@ -229,7 +230,7 @@ tput ed
 tput sgr0
 echo
    if [ -f "$HOME/$domain/$domain.txt" ]; then
-    cat $HOME/$domain/$domain.txt | httprobe | tee $HOME/$domain/http_$domain.txt
+    cat $HOME/$domain/$domain.txt | httprobe $ht | tee $HOME/$domain/http_$domain.txt
    else 
     httprobeSingle
    fi
@@ -240,11 +241,11 @@ else
 if [ "$CONT" = "y" ]; then
 
 echo
-echo -e " ------------------------------- "
+echo -e " ---------------------------- "
 echo
-echo -e " \033[36;7;5;107m     Installing Httprobe      \033[0m"
+echo -e " \033[36;7;5;107m     Installing Httprobe       \033[0m"
 echo
-echo -e " ------------------------------- "
+echo -e " ---------------------------- "
 tput ed
 tput sgr0
 echo
@@ -258,7 +259,7 @@ echo -e " ---------------------------- "
 tput ed
 tput sgr0
 echo
- cat $HOME/$domain/$domain.txt | httprobe | tee $HOME/$domain/http_$domain.txt
+ cat $HOME/$domain/$domain.txt | httprobe $ht | tee $HOME/$domain/http_$domain.txt
 else
   break;
 fi
@@ -304,7 +305,7 @@ tput sgr0
 echo
    if [ -f "$HOME/$domain/http_$domain.txt" ]; then
    mkdir -p $HOME/$domain/Aquatone_$domain
-    cat $HOME/$domain/http_$domain.txt | aquatone -out $HOME/$domain/Aquatone_$domain
+    cat $HOME/$domain/http_$domain.txt | aquatone -out $HOME/$domain/Aquatone_$domain $aq
    else 
     aquatoneSingle
    fi
@@ -498,11 +499,11 @@ else
   if [ "$CONT" = "y" ]; then
  
 echo
-echo -e " ------------------------------ "
+echo -e " ---------------------------- "
 echo
-echo -e " \033[36;7;5;107m      Installing Waybackurls      \033[0m"
+echo -e " \033[36;7;5;107m      Installing Waybackurls       \033[0m"
 echo
-echo -e " ------------------------------ "
+echo -e " ---------------------------- "
 tput ed
 tput sgr0
 echo
@@ -552,7 +553,7 @@ dalfoxRun(){
    tput sgr0
    echo
    if [ -f "$HOME/$domain/final_$domain.txt" ]; then
-    cat $HOME/$domain/final_$domain.txt | kxss | sed 's/=.*/=/' | sed 's/URL: //' | dalfox pipe
+    cat $HOME/$domain/final_$domain.txt | kxss | sed 's/=.*/=/' | sed 's/URL: //' | dalfox pipe $df
    else         
     dalfoxSingle
    fi
@@ -583,7 +584,7 @@ dalfoxRun(){
         tput ed
         tput sgr0
         echo
-        cat $HOME/$domain/final_$domain.txt | kxss | sed 's/=.*/=/' | sed 's/URL: //' | dalfox pipe 
+        cat $HOME/$domain/final_$domain.txt | kxss | sed 's/=.*/=/' | sed 's/URL: //' | dalfox pipe $df
      else
      break; 
      fi
