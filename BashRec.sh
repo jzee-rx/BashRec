@@ -93,10 +93,8 @@ do
         echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 15 to Quit${reset}";;
     esac
 done
-
    else 
     nucleiSingle 
-    break
    fi
 }
 
