@@ -107,6 +107,7 @@ findomainInstall(){
   cd findomain
   cargo build --release
   sudo cp target/release/findomain /usr/bin/
+  cd ~
 }
 
 #Includes the installation of httprobe,runs if the tool is not installed
@@ -117,6 +118,7 @@ httprobeInstall(){
   go install github.com/tomnomnom/httprobe
   sudo mv $HOME/go/bin/httprobe /usr/bin/
   clear
+  cd ~
 }
 
 #Includes the installation of nuclei,runs if the tool is not installed
@@ -125,6 +127,7 @@ nucleiInstall(){
   cd nuclei/v2/cmd/nuclei/
   go build
   sudo mv nuclei /usr/bin/
+  cd ~
 }
 
 #Includes the installation of waybackurls,runs if the tool is not installed
@@ -132,6 +135,7 @@ waybackUrlInstall(){
   go get github.com/tomnomnom/waybackurls
   go install github.com/tomnomnom/waybackurls
   sudo mv $HOME/go/bin/waybackurls /usr/bin/
+  cd ~
 }
 
 #Includes the installation of dalfox,runs if the tool is not installed
@@ -142,6 +146,7 @@ dalfoxInstall(){
         go get -u github.com/hahwul/dalfox
         go install -u github.com/hahwul/dalfox
         sudo mv $HOME/go/bin/dalfox /usr/bin/
+        cd ~
 }
 
 
@@ -165,11 +170,11 @@ else
     CONT=${CONT,,}
 if [ "$CONT" = "y" ]; then
 echo
-echo -e " ---------------------------- "
+echo -e " ------------------------------- "
 echo
-echo -e " \033[36;7;5;107m     Installing Findomain      \033[0m"
+echo -e " \033[36;7;5;107m    Installing Findomain     \033[0m"
 echo
-echo -e " ---------------------------- "
+echo -e " ------------------------------- "
 tput ed
 tput sgr0
 echo
@@ -208,7 +213,7 @@ read -p "${green} Enter additional flags along with the options: ${reset}" f
   echo "${magenta}Target flag is provided by default ${reset}"
   findomainFlag
   else
-  findomainSingle
+  findomainRun
   fi
 }
 httprobeRun(){
@@ -237,11 +242,11 @@ else
 if [ "$CONT" = "y" ]; then
 
 echo
-echo -e " ---------------------------- "
+echo -e " ------------------------------- "
 echo
-echo -e " \033[36;7;5;107m     Installing Httprobe       \033[0m"
+echo -e " \033[36;7;5;107m     Installing Httprobe      \033[0m"
 echo
-echo -e " ---------------------------- "
+echo -e " ------------------------------- "
 tput ed
 tput sgr0
 echo
@@ -287,7 +292,7 @@ done
 }
 httprobeFlag(){
 read -p "${green}Enter the additional flags with the options: ${reset}" ht
-  httprobeSingle
+  httprobeRun
 }
 aquatoneRun(){
 echo
@@ -481,7 +486,7 @@ read -p "${green}Enter additional flags along with the options: ${reset}" nu
   echo "${magenta}The flag is provided by default ${reset}"
   nucleiFlag
   else
-  nucleiSingle
+  nucleiRun
   fi
 }
 waybakurlRun(){
@@ -495,11 +500,11 @@ else
   if [ "$CONT" = "y" ]; then
  
 echo
-echo -e " ---------------------------- "
+echo -e " ------------------------------ "
 echo
-echo -e " \033[36;7;5;107m      Installing Waybackurls       \033[0m"
+echo -e " \033[36;7;5;107m      Installing Waybackurls      \033[0m"
 echo
-echo -e " ---------------------------- "
+echo -e " ------------------------------ "
 tput ed
 tput sgr0
 echo
@@ -612,7 +617,7 @@ read -p "${green}Enter additional flags along with the options: ${reset}" df
   echo "${magenta} Pipe flag is provided by default ${reset}"
   dalfoxFlag
   else
-  dalfoxSingle
+  dalfoxRun
   fi
 }
 basicRecon(){
@@ -721,6 +726,3 @@ do
         ;;
     esac
 done
-
-
-
