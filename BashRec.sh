@@ -31,79 +31,79 @@ select opt in "${options[@]}"
 do
     case $opt in
         "All Templates")            
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/ -o "$loc"_Nuclei.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/ -o $HOME/$domain/$domain_Nuclei.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Cnvd")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/cnvd/ -o "$loc"_NucleiCnvd.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/cnvd/ -o $HOME/$domain/$domain_NucleiCnvd.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Cves")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/cves/ -o "$loc"_NucleiCVES.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/cves/ -o $HOME/$domain/$domain_NucleiCVES.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Default-Logins")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/default-logins/ -o "$loc"_NucleiDefLogin.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/default-logins/ -o $HOME/$domain/$domain_NucleiDefLogin.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Dns")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/dns/ -o "$loc"_NucleiDNS.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/dns/ -o $HOME/$domain/$domain_NucleiDNS.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Exposed-Panels")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/exposed-panels/ -o "$loc"_NucleiExpPanels.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/exposed-panels/ -o $HOME/$domain/$domain_NucleiExpPanels.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Exposures")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/exposures/ -o "$loc"_NucleiExposures.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/exposures/ -o $HOME/$domain/$domain_NucleiExposures.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Files")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/file/ -o "$loc"_NucleiFiles.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/file/ -o $HOME/$domain/$domain_NucleiFiles.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Fuzzing")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/fuzzing/ -o "$loc"_NucleiFuzzing.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/fuzzing/ -o $HOME/$domain/$domain_NucleiFuzzing.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Headless")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/headless/ -o "$loc"_NucleiHeadless.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/headless/ -o $HOME/$domain/$domain_NucleiHeadless.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Helpers")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/helpers/ -o "$loc"_NucleiHelpers.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/helpers/ -o $HOME/$domain/$domain_NucleiHelpers.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Security-Misconfiguration")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/misconfiguration/ -o "$loc"_NucleiSecMis.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/misconfiguration/ -o $HOME/$domain/$domain_NucleiSecMis.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Subdomain-Takeover")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/takeovers/ -o "$loc"_NucleiSubdomainTakeover.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/takeovers/ -o $HOME/$domain/$domain_NucleiSubdomainTakeover.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Miscellaneous")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/miscellaneous/ -o "$loc"_NucleiMiscellaneous.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/miscellaneous/ -o $HOME/$domain/$domain_NucleiMiscellaneous.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Network")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/network/ -o "$loc"_NucleiNetwork.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/network/ -o $HOME/$domain/$domain_NucleiNetwork.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
          "Technologies")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/technologies/ -o "$loc"_NucleiTechnologies.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/technologies/ -o $HOME/$domain/$domain_NucleiTechnologies.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
          "Tokens")
-           nuclei -l "$loc" -t "$HOME"/nuclei-templates/token-spray/ -o "$loc"_NucleiTokens.txt $nu
+           nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/token-spray/ -o $HOME/$domain/$domain_NucleiTokens.txt $nu
            echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
          "Vulnerabilities")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/vulnerabilities/ -o "$loc"_NucleiVulnerabilities.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/vulnerabilities/ -o $HOME/$domain/$domain_NucleiVulnerabilities.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
          "Workflows")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/workflows/ -o "$loc"_NucleiWorkflows.txt $nu
+            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/workflows/ -o $HOME/$domain/$domain_NucleiWorkflows.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Quit")
