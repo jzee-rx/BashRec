@@ -26,7 +26,7 @@ Nuclei(){
 if [ -f "$HOME/$domain/http_$domain.txt" ]; then
 
  echo "${yellow}Enter the template choice: ${reset}"
-options=("All Templates" "Cnvd" "Cves" "Default-Logins" "Dns" "Exposed-Panels" "Exposures" "Files" "Fuzzing" "Headless" "Helpers" "Security-Misconfiguration" "Subdomain-Takeover" "Miscellaneous" "Network" "Technologies" "Tokens" "Vulnerabilities" "Workflows" "Quit")
+options=("All Templates" "Cnvd" "Cves" "Default-Logins" "Dns" "Exposed-Panels" "Exposures" "Files" "Fuzzing" "Headless" "Security-Misconfiguration" "Subdomain-Takeover" "Miscellaneous" "Network" "Technologies" "Tokens" "Vulnerabilities" "Workflows" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -68,10 +68,6 @@ do
             ;;
         "Headless")
             nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/headless/ -o $HOME/$domain/$domain_NucleiHeadless.txt $nu
-            echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
-            ;;
-        "Helpers")
-            nuclei -l $HOME/$domain/http_$domain.txt -t "$HOME"/nuclei-templates/helpers/ -o $HOME/$domain/$domain_NucleiHelpers.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Security-Misconfiguration")
@@ -424,7 +420,7 @@ nucleiSingle(){
    elif [ -f "$loc" ]; then
     echo " "
      echo "${yellow}Enter the template choice: ${reset}"
-options=("All Templates" "Cnvd" "Cves" "Default-Logins" "Dns" "Exposed-Panels" "Exposures" "Files" "Fuzzing" "Headless" "Helpers" "Security-Misconfiguration" "Subdomain-Takeover" "Miscellaneous" "Network" "Technologies" "Tokens" "Vulnerabilities" "Workflows" "Quit")
+options=("All Templates" "Cnvd" "Cves" "Default-Logins" "Dns" "Exposed-Panels" "Exposures" "Files" "Fuzzing" "Headless" "Security-Misconfiguration" "Subdomain-Takeover" "Miscellaneous" "Network" "Technologies" "Tokens" "Vulnerabilities" "Workflows" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -466,10 +462,6 @@ do
             ;;
         "Headless")
             nuclei -l "$loc" -t "$HOME"/nuclei-templates/headless/ -o "$loc"_NucleiHeadless.txt $nu
-            echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
-            ;;
-        "Helpers")
-            nuclei -l "$loc" -t "$HOME"/nuclei-templates/helpers/ -o "$loc"_NucleiHelpers.txt $nu
             echo "${yellow}Do you want to use another template? Press Enter to view templates or Enter 20 to Quit${reset}"
             ;;
         "Security-Misconfiguration")
