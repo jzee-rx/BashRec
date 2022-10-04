@@ -719,7 +719,7 @@ do
             ;;
         "Httprobe")
             echo "${magenta}Press Enter to run in default mode or type any additional flags below${reset}" 
-            httprobeFlag
+            httprobeSingle
             echo "${yellow}Press Enter to view options or Press 8 to quit:${reset}"
             echo " "
             ;;
